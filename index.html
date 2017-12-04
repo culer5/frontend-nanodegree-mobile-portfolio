@@ -10,7 +10,7 @@
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
     
 
-    <link href="css/style.css" rel="stylesheet">
+    
     <link href="css/print.css" rel="stylesheet">
 
     <script>
@@ -21,7 +21,7 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
-    <script src="http://www.google-analytics.com/analytics.js"></script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.js"></script>
   </head>
 
@@ -77,10 +77,17 @@ godefer.parentNode.insertBefore(giftofspeed, godefer);
 /* Second CSS File */
 var giftofspeed2 = document.createElement('link');
 giftofspeed2.rel = 'stylesheet';
-giftofspeed2.href = 'styles/app.css';
+giftofspeed2.href = 'link href="css/style.css" rel="stylesheet';
 giftofspeed2.type = 'text/css';
 var godefer2 = document.getElementsByTagName('link')[0];
 godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+/* Third CSS File */
+var giftofspeed3 = document.createElement('link');
+giftofspeed3.rel = 'stylesheet';
+giftofspeed3.href = 'link href="css/style.css" rel="stylesheet';
+giftofspeed3.type = 'text/css';
+var godefer3 = document.getElementsByTagName('link')[0];
+godefer3.parentNode.insertBefore(giftofspeed3, godefer3);
 </script>
 
         <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
