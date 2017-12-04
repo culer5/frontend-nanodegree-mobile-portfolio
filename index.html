@@ -9,10 +9,6 @@
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
     
-
-    
-    <link href="css/print.css" rel="stylesheet">
-
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
@@ -96,6 +92,16 @@ window.addEventListener("load", downloadJSAtOnload, false);
 else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
+</script>
+<script>
+    var cb = function() {
+    var l = document.createElement('link'); l.rel = 'stylesheet';
+    l.href = 'css/print.css';
+    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h); };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+              webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
 </script>
   </body>
 </html>
